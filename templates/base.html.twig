@@ -2,7 +2,7 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Welcome{% endblock %}</title>
         <link rel="icon" href="images/ss22.ico">
          <link rel="stylesheet"  href="{{asset('/css/styles.css')}}">
          <lin rel="stylesheet"   href="{{asset('/css/style1.css')}}">
@@ -39,8 +39,8 @@
 {% endif %}
 
 
-        <a href="register" class="btn">INSCRIPTION</a>
-        <a href="" class="btn">PANIER</a>
+        <a href={{ path('app_register') }} class="btn">INSCRIPTION</a>
+        <a href={{ path('cart') }} class="btn">PANIER</a>
 
       </nav>
 
@@ -58,8 +58,8 @@
       <a href="accessoires" class="btn">Accessoires</a>
     </div>
     {% block body %}{% endblock %}
-     {# <script src="js/jquery.js"></script>
-    <script src="js/main.js"></script> #}
+     {# <script src="js/jquery.js"></script> #}
+    <script src="js/main.js"></script>
          <!-- Footer -->
     <footer class="footer">
       <div class="top">
@@ -94,7 +94,7 @@
 
           <div class="link">
             <h4>Ressources </h4>
-            <a href="mention légal">Mefntions legales</a>
+            <a href=app_mention_l_gal{{ path('app_mention_l_gal') }}>Mefntions legales</a>
             <a href="politique">Politique de confidentialite</a>
             <a href="cd">Condition d'utilisation</a>
             <a href="faq">FAQ</a>
